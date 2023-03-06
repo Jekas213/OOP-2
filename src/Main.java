@@ -9,12 +9,16 @@ public class Main {
         Bicycle bicycle = new Bicycle("bicycle1", 2);
         Bicycle bicycle2 = new Bicycle("bicycle1", 2);
 
-        truck.serviceStation();
-        truck2.serviceStation();
-        car2.serviceStation();
-        car.serviceStation();
-        bicycle2.serviceStation();
-        bicycle.serviceStation();
+        service(car);
+        service(car2);
+        service(truck);
+        service(truck2);
+        service(bicycle);
+        service(bicycle2);
 
+
+    }
+    public static void service(ServiceStation serviceStation){
+        serviceStation.serviceStation();
     }
 }
