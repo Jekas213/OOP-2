@@ -1,8 +1,10 @@
-public class Truck {
+public class Truck extends Machine implements ServiceStation {
 
-    public String modelName;
-    public int wheelsCount;
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
+    @Override
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
@@ -13,5 +15,13 @@ public class Truck {
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+
+    @Override
+    public void serviceStation() {
+        System.out.println("Обслуживаем " + getModelName());
+        updateTyre();
+        checkEngine();
+        checkTrailer();
     }
 }
