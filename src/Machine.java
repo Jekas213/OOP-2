@@ -16,6 +16,10 @@ public class Machine {
     }
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку: " + wheelsCount + " штук(и)");
+    }
+
+    public void service (){
+        updateTyre();
     }
 }
